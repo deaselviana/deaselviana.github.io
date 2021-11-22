@@ -1,0 +1,157 @@
+.navbar {
+	$nav__padding: 100% - $dimen__container--width;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: $dimen__navbar--height;
+	padding: 0% $nav__padding / 2;
+	background-color: $color__light;
+	z-index: 9;
+
+	&.--active {
+		border-bottom: 1px solid $color__dark--200;
+	}
+
+	&__close {
+		display: none;
+	}
+
+	&__logo {
+		font-family: $font__heading;
+		font-size: 20px;
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: max-content;
+		height: fit-content;
+
+		&--link {
+			color: $color__dark--500;
+			transition: all 0.3s ease-in-out;
+			transition-property: color, text-decoration;
+
+			&:hover {
+				color: $color__dark;
+				text-decoration: underline;
+			}
+
+			&.--active {
+				color: $color__dark;
+				text-decoration: underline;
+			}
+		}
+
+		&--list {
+			display: block;
+			margin: {
+				left: 50px;
+			}
+		}
+
+		@media screen and (min-width: 375px) and (max-width: 575px) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100vw;
+			height: 100vh;
+			padding: {
+				top: 80px;
+				left: $nav__padding / 2;
+				right: $nav__padding / 2;
+			}
+			background: $color__light;
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.3s ease-in-out;
+			transition-property: opacity;
+
+			&.--active {
+				opacity: 1;
+				pointer-events: all;
+			}
+
+			&--link {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				height: 50px;
+				font-size: 20px;
+			}
+
+			&--list {
+				display: block;
+				width: 100%;
+				height: max-content;
+				margin: 0;
+			}
+		}
+	}
+
+	@media screen and (min-width: 375px) and (max-width: 575px) {
+		height: 70px;
+
+		&__close {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: max-content;
+			height: max-content;
+			background: $color__light;
+			border: none;
+			outline: none;
+			z-index: 9;
+
+			span {
+				position: relative;
+				display: block;
+				width: 20px;
+				height: 20px;
+
+				&::after,
+				&::before {
+					content: '';
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 2px;
+					background: $color__dark;
+					transition: all 0.3s ease-in-out;
+				}
+
+				&::after {
+					bottom: 30%;
+				}
+
+				&::before {
+					top: 30%;
+				}
+
+				&.--active {
+					&::after {
+						top: 50%;
+						transform: rotate(45deg);
+					}
+					&::before {
+						top: 50%;
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+
+		&__logo {
+			font-size: 18px;
+			z-index: 10;
+		}
+	}
+}

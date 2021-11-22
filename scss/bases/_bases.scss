@@ -1,0 +1,31 @@
+*,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: block;
+	width: 100%;
+	height: max-content;
+	min-width: 100vw;
+	min-height: 100vh;
+	font-family: $font__main;
+	overflow-x: hidden;
+
+	a {
+		color: $color__dark;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	.container {
+		width: $dimen__container--width !important;
+		margin: auto;
+	}
+}
