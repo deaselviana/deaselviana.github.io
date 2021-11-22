@@ -57,7 +57,7 @@
 			}
 		}
 
-		@media screen and (min-width: 375px) and (max-width: 575px) {
+		@media screen and (max-width: 575px) {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -97,7 +97,7 @@
 		}
 	}
 
-	@media screen and (min-width: 375px) and (max-width: 575px) {
+	@media screen and (max-width: 575px) {
 		height: 70px;
 
 		&__close {

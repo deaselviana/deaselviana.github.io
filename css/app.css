@@ -114,7 +114,7 @@ body .container {
   margin-left: 50px;
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .navbar__nav {
     position: absolute;
     top: 0;
@@ -158,7 +158,7 @@ body .container {
   }
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .navbar {
     height: 70px;
   }
@@ -276,7 +276,7 @@ body .container {
   cursor: pointer;
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .content .content__banner--cta, .content .content__biodata--cta, .content .content__project--cta {
     height: 50px;
     padding: 0 30px;
@@ -309,7 +309,7 @@ body .container {
   margin-bottom: 25px;
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .content__banner {
     width: 100%;
   }
@@ -462,7 +462,7 @@ body .container {
   transition-property: width;
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .content__biodata {
     width: 100%;
   }
@@ -544,7 +544,7 @@ body .container {
   margin-bottom: 50px;
 }
 
-@media screen and (min-width: 375px) and (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .content__project {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
